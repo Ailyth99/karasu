@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+		/>
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"
+		/>
+		<meta http-equiv="Expires" content="0" />
+		<meta name="wap-font-scale" content="no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>
+			Zero Miko SS Rank calculator
+		</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600&display=swap"
+		rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152430894-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-152430894-2');
+</script>
+
+		<link rel="stylesheet" href="./src/style.css" />
+	</head>
+	<body style="background-color: rgb(30, 30, 31);font-family: 'Noto Serif SC', serif;;">
+		<div class="webinfo">
+			<div class="titlex">
+				零~濡鴉之巫女~SS评价计算器
+			</div>
+			<div class="guide">
+				<a href="http://psnine.com/topic/36415">
+					>>PS4/PS5版白金攻略
+				</a>
+			</div>
+		</div>
+		<hr style="margin-top: 20px;margin-bottom: 10px;">
+    
+		<div class="calculator">
+			目标章节:
+			<select name="chapterPts" id="chapterPts" onchange="inputItem()" style="height: 35px;">
+				<option value="0">
+					下拉选择
+				</option>
+				<option value="22250">
+					一之雫(22250)
+				</option>
+				<option value="140000">
+					二之雫(140000)
+				</option>
+				<option value="105000">
+					三之雫(105000)
+				</option>
+				<option value="202650">
+					四之雫(202650)
+				</option>
+				<option value="137000">
+					五之雫(137000)
+				</option>
+				<option value="180000">
+					六之雫(180000)
+				</option>
+				<option value="116000">
+					七之雫(116000)
+				</option>
+				<option value="109000">
+					八之雫(109000)
+				</option>
+				<option value="99000">
+					九之雫(99000)
+				</option>
+				<option value="114000">
+					十之雫(114000)
+				</option>
+				<option value="125000">
+					十一之雫(125000)
+				</option>
+				<option value="177000">
+					十二之雫(177000)
+				</option>
+				<option value="108350">
+					十三之雫(108350)
+				</option>
+				<option value="395000">
+					終之雫(395000)
+				</option>
+				<option value="350000">
+					終之雫噩梦(350000)
+				</option>
+				<option value="58000">
+					二之綾(58000)
+				</option>
+				<option value="25500">
+					二之綾噩梦(25500)
+				</option>
+				<option value="43000">
+					三之綾(43000)
+				</option>
+				<option value="14500">
+					三之綾噩梦(14500)
+				</option>
+				<option value="43000">
+					終之綾(43000)
+				</option>
+				<option value="9500">
+					終之綾噩梦(9500)
+				</option>
+			</select>
+		</div>
+
+
+		<p class='itemNameTotal'>
+			总得分：
+			<span id="myPts" class="scorehigh">
+				0
+			</span>
+		</p>
+		<p class="rPts" id="rPts">
+			离SS评价还差
+			<span id="totalPtsRemain" class="scorehigh">
+				0
+			</span>
+		</p>
+		<p class="ssComplete" id="ssComplete">
+			🎉🎉已达成本章节SS评价标准
+		</p>
+    <hr style="margin-top: 0px;">
+		<p class="ssSelect" id="ssSelect">
+			请先选择章节
+		</p>
+
+		<div id="inputArea" style="display: none;">
+			<div class="calculator">
+				请输入当前拍摄得分：
+				<input type="number" value="0" name="shotPts" id="shotPts" class="itemInput" style="width: 90px;margin-top: 10px;"
+				onkeyup="inputItem()" onfocus="javascript:if(this.value==0)this.value='';">
+			</div>
+			<div class="calculator">
+				请输入道具数量
+			</div>
+			<div class="item-select" id="item-select">
+				<div class="itemNum">
+					当前持有数
+				</div>
+				<div class="itemBuy">
+					任务前购买数
+				</div>
+				<div class="man">
+					万叶丸
+				</div>
+				<div class="manNum">
+					<input type="number" value="0" id="man1" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+				<div class="manBuy">
+					<input type="number" value="0" id="man2" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+				<div class="goshinsui">
+					御神水
+				</div>
+				<div class="goNum">
+					<input type="number" value="0" id="go1" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+				<div class="goBuy">
+					<input type="number" value="0" id="go2" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+				<div class="jyoka">
+					净化之火
+				</div>
+				<div class="jyoukaNum">
+					<input type="number" value="0" id="jyo1" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+				<div class="jyokaBuy">
+					<input type="number" value="0" id="jyo2" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+				<div class="kagami">
+					镜石
+				</div>
+				<div class="kagamiNum">
+					<input type="number" value="0" id="ka1" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+				<div class="kagamiBuy">
+					<input type="number" value="0" id="ka2" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+				<div class="sumi">
+					墨壶
+				</div>
+				<div class="sumiNum">
+					<input type="number" value="0" id="su1" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+				<div class="sumiBuy">
+					<input type="number" value="0" id="su2" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+				<div class="type0">
+					零式
+				</div>
+				<div class="type0Num">
+					<input type="number" value="0" id="t01" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+				<div class="type0Buy">
+					<input type="number" value="0" id="t02" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+				<div class="type14">
+					一四式
+				</div>
+				<div class="type14Num">
+					<input type="number" value="0" id="t141" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+				<div class="type14Buy">
+					<input type="number" value="0" id="t142" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+				<div class="type61">
+					六一式
+				</div>
+				<div class="type61Num">
+					<input type="number" value="0" id="t611" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+				<div class="type61Buy">
+					<input type="number" value="0" id="t612" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+				<div class="type90">
+					九零式
+				</div>
+				<div class="type90Num">
+					<input type="number" value="0" id="t901" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+				<div class="type90Buy">
+					<input type="number" value="0" id="t902" class="itemInput" onkeyup="inputItem()"
+					onfocus="javascript:if(this.value==0)this.value='';">
+				</div>
+			</div>
+			<p class='itemName'>
+				道具结算得分：
+				<span id="itemTotalMy" class="scorehigh">
+					0
+				</span>
+			</p>
+		</div>
+
+		<div class="clickBtn" onclick="location.reload()">
+			重置数据 
+		</div>
+<p class="moreInfo">
+一些说明：<br>
+1.购买的物品不计入得分，持有物品数大于购买数时，多余的物品会计分。<br>
+2.每种道具对应分数换算请查看<a href="http://psnine.com/topic/36415?page=17" style="color: sienna;">此列表</a>。<br>
+3.除终章，绫音章，其他章节的普通和噩梦难度分数相同。
+</p>
+<p style="text-align: center;font-size: 12px;color: #61e1e6; margin: 20px auto;" >作者：aikika</p>
+		<script src="./src/ssrank.js">
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,239 @@
+
+
+.webinfo {
+    display: block;
+    margin-top: 10px;
+}
+
+.calculator{
+    margin-top: 20px;
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    color: #D2401c;
+}
+
+.clickBtn{
+    margin: 25px auto;
+    font-size: 15px;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    border:1px solid #D2401c;   
+    color: silver;
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.titlex
+{   text-align: center;
+    color: #D2401c;
+    font-size:25px;
+    font-weight: bold; 
+    margin-top: 5px;
+}
+
+
+
+.guide
+{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.itemName
+{   margin-top: 5px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color:#D2401c;
+}
+
+.itemNameTotal
+{   margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color:#61e1e6;
+}
+
+.ssSelect
+{   margin-top: 5px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color:#61e1e6;
+    display: block;
+}
+
+.ssComplete
+{   margin-top: 5px;
+    text-align: center;
+    font-size: 21px;
+    font-weight: bold;
+    color:#61e1e6;
+    display: none;
+}
+
+.rPts
+{   margin-top: 5px;
+    text-align: center;
+    font-size: 20px;
+   
+    color:#D2401c;
+    display: none;
+}
+
+
+.scorehigh
+{
+    color:rgb(231, 222, 222);
+    font-size: 20px;
+}
+
+.btnComfirm
+{   font-size: 10px;
+    margin-top: 30px;
+    font-weight: bold;
+    
+
+}
+
+.itemInput
+{
+    width: 80px;
+    height: 30px;
+    border:none;
+    font-family: 'Noto Serif SC', serif;
+    font-size: 18px;
+    font-weight: bold;
+    color:#D2401c;
+    border-radius: 3px;
+    background-color: silver;
+}
+
+.moreInfo
+{
+    color:silver;
+    line-height: 25px;
+    font-size: 15px;
+    margin-top: 30px;
+
+}
+
+.totalBtn
+{
+    font-family: 'Noto Serif SC', serif;
+    font-weight: bold;
+    font-size: 15px;
+    height: 40px;
+    width: 90px;
+    background: #3a526e;
+}
+
+select
+{
+width: 150px;
+border: none;
+font-family: 'Noto Serif SC', serif;
+font-size: 15px;
+color:#D2401c;
+border-radius: 3px;
+
+}
+
+
+
+a
+{
+    color: aliceblue;
+}
+
+.item-select {
+    margin-top: 10px;
+    margin-bottom: 11px;
+    font-size: 15px;
+    text-align: center;
+    display: grid;
+    color: silver;
+    grid-template-columns: 0.6fr 1.1fr 1.3fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 8px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". itemNum itemBuy"
+      "man manNum manBuy"
+      "goshinsui goNum goBuy"
+      "jyoka jyoukaNum jyokaBuy"
+      "kagami kagamiNum kagamiBuy"
+      "sumi sumiNum sumiBuy"
+      "type0 type0Num type0Buy"
+      "type14 type14Num type14Buy"
+      "type61 type61Num type61Buy"
+      "type90 type90Num type90Buy";
+  }
+  
+  .itemNum { grid-area: itemNum; }
+  
+  .itemBuy { grid-area: itemBuy; }
+  
+  .man { grid-area: man; }
+  
+  .manNum { grid-area: manNum; }
+  
+  .manBuy { grid-area: manBuy; }
+  
+  .goshinsui { grid-area: goshinsui; }
+  
+  .goNum { grid-area: goNum; }
+  
+  .goBuy { grid-area: goBuy; }
+  
+  .jyoka { grid-area: jyoka; }
+  
+  .jyoukaNum { grid-area: jyoukaNum; }
+  
+  .jyokaBuy { grid-area: jyokaBuy; }
+  
+  .kagami { grid-area: kagami; }
+  
+  .kagamiNum { grid-area: kagamiNum; }
+  
+  .kagamiBuy { grid-area: kagamiBuy; }
+  
+  .sumi { grid-area: sumi; }
+  
+  .sumiNum { grid-area: sumiNum; }
+  
+  .sumiBuy { grid-area: sumiBuy; }
+  
+  .type0 { grid-area: type0; }
+  
+  .type0Num { grid-area: type0Num; }
+  
+  .type0Buy { grid-area: type0Buy; }
+  
+  .type14 { grid-area: type14; }
+  
+  .type14Num { grid-area: type14Num; }
+  
+  .type14Buy { grid-area: type14Buy; }
+  
+  .type61 { grid-area: type61; }
+  
+  .type61Num { grid-area: type61Num; }
+  
+  .type61Buy { grid-area: type61Buy; }
+  
+  .type90 { grid-area: type90; }
+  
+  .type90Num { grid-area: type90Num; }
+  
+  .type90Buy { grid-area: type90Buy; }
+  
+  
